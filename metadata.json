@@ -1,0 +1,5 @@
+{
+  "name": "Weather-VertoFx",
+  "description": "A visually appealing weather dashboard application built with React and Tailwind CSS, showcasing current weather, forecasts, and a world map view.",
+  "requestFramePermissions": []
+}
