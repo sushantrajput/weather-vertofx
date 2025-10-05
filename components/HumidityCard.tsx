@@ -1,6 +1,6 @@
 import React from 'react';
 
-// SVG illustration for a water drop feel
+
 const HumidityIllustration: React.FC = () => (
     <div className="absolute -bottom-4 -right-4 text-blue-300/50 opacity-50">
         <svg width="120" height="120" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +15,7 @@ interface HumidityCardProps {
 }
 
 const HumidityCard: React.FC<HumidityCardProps> = ({ humidity }) => {
-    // Updated function to provide a more accurate description
+   
     const getHumidityDescription = (h: number): string => {
         if (h > 70) return "High";
         if (h < 30) return "Low";
@@ -23,7 +23,7 @@ const HumidityCard: React.FC<HumidityCardProps> = ({ humidity }) => {
     };
 
     return (
-        // New card design with a light gradient and visual humidity bar
+     
         <div className="bg-gradient-to-br from-sky-200 to-cyan-200 text-slate-800 p-6 rounded-3xl shadow-lg relative overflow-hidden h-full flex flex-col justify-between">
             <HumidityIllustration />
             
