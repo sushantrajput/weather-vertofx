@@ -43,7 +43,7 @@ interface DailyForecastItemProps {
 
 const DailyForecastItem: React.FC<DailyForecastItemProps> = ({ dayData, dayName, isExpanded, onToggle, theme }) => {
     const { condition, temps } = dayData;
-    // FIX: Explicitly use properties of `temps` to avoid type errors with `Object.values`.
+ 
     const temp_max = Math.max(temps.morning, temps.afternoon, temps.evening, temps.night);
     const temp_min = Math.min(temps.morning, temps.afternoon, temps.evening, temps.night);
 
