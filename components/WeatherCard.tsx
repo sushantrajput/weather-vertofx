@@ -5,7 +5,7 @@ import themesData from '../data/themes.ts';
 
 type Period = 'day' | 'night' | 'sunrise' | 'sunset';
 
-// --- NEW AESTHETIC ILLUSTRATION COMPONENTS ---
+
 
 const SunIcon = () => (
     <div className="absolute top-10 right-10 w-32 h-32 sm:w-40 sm:h-40">
@@ -120,7 +120,7 @@ const getPeriodOfDay = (timezone: string): Period => {
         return 'night';
     } catch (e) {
         console.error("Could not determine period of day for timezone:", timezone, e);
-        // Fallback based on client time
+      
         const hour = new Date().getHours();
         if (hour >= 5 && hour < 8) return 'sunrise';
         if (hour >= 8 && hour < 18) return 'day';
