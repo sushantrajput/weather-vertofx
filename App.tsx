@@ -1,4 +1,4 @@
-
+import { Analytics } from "@vercel/analytics/next"
 import React, { useState } from 'react';
 import Header from './components/Header';
 import ErrorModal from './components/ErrorModal';
