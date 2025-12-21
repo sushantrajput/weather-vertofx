@@ -1,5 +1,5 @@
-import { Analytics } from "@vercel/analytics/next"
 import React, { useState } from 'react';
+import { Analytics } from "@vercel/analytics/react";
 import Header from './components/Header';
 import ErrorModal from './components/ErrorModal';
 import Dashboard from './components/Dashboard';
@@ -40,6 +40,7 @@ const App: React.FC = () => {
                 )}
             </div>
         </main>
+        <Analytics />
     </div>
   );
 };
