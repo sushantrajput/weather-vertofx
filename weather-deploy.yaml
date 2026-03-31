@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-app
+  template:
+    metadata:
+      labels:
+        app: weather-app
+    spec:
+      containers:
+      - name: weather-container
+        image: weather-vertofx:v1
+        imagePullPolicy: Never # Important: Use the local image we just built
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: weather-service
+spec:
+  type: NodePort
+  selector:
+    app: weather-app
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30005
